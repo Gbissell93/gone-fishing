@@ -16,7 +16,8 @@ function getRandom(min, max) {
     max = Math.floor(max);
      return Math.floor(Math.random() * (max - min) + min)   
 }
-//Fish generator
+//Fish generator and dice roll
+
 
 function getFishName (fish)  {
      fish = {};
@@ -49,6 +50,8 @@ function getFishName (fish)  {
     while(hours < 6) {
         //Time updates every iteration
         ++hours
+
+
         if (hours === 6 ) {
             console.log("\n==============================================\n")
             console.log(`it is currently ${hours + 6}:00pm. You curentley have ${caught.length} fish`)
@@ -57,7 +60,8 @@ function getFishName (fish)  {
         
         console.log("\n==============================================\n")
         console.log(`it is currently ${hours + 6}:00am. You curentley have ${caught.length} fish`)}
-        //    
+        // Begin Fishing =============================================================
+        
         caught.push(getFishName(fish));
             console.log(`you caught a ${caught[caught.length - 1].name} weight : ${caught[caught.length - 1].size}lbs valued at $${caught[caught.length - 1].value}`)
             
@@ -91,14 +95,11 @@ function getFishName (fish)  {
                             console.log(`\nYour current weight is at ${Math.round(weight * 100) / 100}lbs and you have $${money} worth of fish\n`)
                         
                          }
-
-
-
-
                 }
-            // update user values
-            
-        
-    
             }
+            console.log(`\nYour catch for the day is ${bucket.length} fish(es)\nwith a total weight of ${weight}lbs and a value of $${money}`)
+            
+            console.log(`==========================================================`)
+            console.log(`Thanks for playing!`)
+            console.log(`==========================================================`)
 
